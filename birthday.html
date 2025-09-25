@@ -59,8 +59,8 @@
   <div class="stage">
     <canvas id="confetti"></canvas>
     <div class="main">
-      <h1 id="title">Surprise! Happy Birthday 🎉</h1>
-      <p class="lead">A little interactive celebration. Click <strong>Surprise</strong> below — watch the cake, candles, confetti and fireworks come alive. Try "Blow Out" when you're ready!</p>
+      <h1 id="title">Surprise! Happy Birthday Sir Jelson🎉</h1>
+      <p class="lead">A little interactive celebration. Click <strong>Surprise</strong></p>
 
       <div class="cake-wrap" aria-hidden="true">
         <div class="cake" id="cake">
@@ -72,15 +72,14 @@
         <div class="plate"></div>
       </div>
 
-      <div id="audioHint" class="small" style="opacity:.7">(sound effects use Web Audio API — allow interaction to enable them)</div>
+      <div id="audioHint" class="small" style="opacity:.7"></div>
     </div>
 
     <aside class="panel">
       <div>
         <div style="display:flex;gap:12px;align-items:center;justify-content:space-between">
           <div>
-            <div style="font-weight:700">For: <span id="nameTarget">You</span></div>
-            <div class="small">Make it personal — double-click the title to edit.</div>
+            <div style="font-weight:700">For: <span id="nameTarget">Sir Lanto</span></div>
           </div>
           <div style="text-align:right">
             <div class="small">Date: <span id="dateNow"></span></div>
@@ -132,11 +131,11 @@
     }
 
     // interactive title edit
-    const title = document.getElementById('title');
-    title.addEventListener('dblclick',()=>{
-      const name = prompt('Type a short name or greeting (e.g. "Ana — 21")', title.textContent) || title.textContent;
-      title.textContent = name;
-    });
+    // const title = document.getElementById('title');
+    // title.addEventListener('dblclick',()=>{
+    //   const name = prompt('Happy Birthday Sir Jelson', title.textContent) || title.textContent;
+    //   title.textContent = name;
+    // });
 
     // confetti canvas
     const confettiCanvas = document.getElementById('confetti');
@@ -265,7 +264,7 @@
 
     function revealSecret(){
       if(document.getElementById('secret')) return; // already revealed
-      const s = document.createElement('div'); s.id='secret'; s.style.position='absolute'; s.style.left='50%'; s.style.top='28%'; s.style.transform='translate(-50%,-50%)'; s.style.padding='18px 26px'; s.style.borderRadius='12px'; s.style.background='linear-gradient(90deg,#111827cc,#0b1220cc)'; s.style.boxShadow='0 14px 40px rgba(0,0,0,.45)'; s.style.textAlign='center'; s.style.fontSize='20px'; s.innerHTML = '<div style="font-weight:800;font-size:20px">Surprise 🎁</div><div style="margin-top:6px;color:#bcd5ff">Wishing you joy, code, and lots of cake!</div>';
+      const s = document.createElement('div'); s.id='secret'; s.style.position='absolute'; s.style.left='50%'; s.style.top='28%'; s.style.transform='translate(-50%,-50%)'; s.style.padding='18px 26px'; s.style.borderRadius='12px'; s.style.background='linear-gradient(90deg,#111827cc,#0b1220cc)'; s.style.boxShadow='0 14px 40px rgba(0,0,0,.45)'; s.style.textAlign='center'; s.style.fontSize='20px'; s.innerHTML = '<div style="font-weight:800;font-size:20px">Surprise 🎁</div><div style="margin-top:6px;color:#bcd5ff">Happy Birthday po Sir Lanto! Salamat po sa pagtuturo sa amin. Wishing you joy, code, and lots of cake!</div>';
       document.querySelector('.stage').appendChild(s);
       // tiny confetti + sparkle
       const rect = confettiCanvas.getBoundingClientRect(); makeConfetti(rect.width/2, rect.height/3, 60);
